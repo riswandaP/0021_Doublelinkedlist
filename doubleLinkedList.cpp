@@ -5,7 +5,7 @@ using namespace std;
 class Node
 {
     public:
-        int nomMhs;
+        int nimMhs;
         Node *next;
         Node *prev;
 };
@@ -17,4 +17,16 @@ class DoubleLinkedList
 
     public:
     DoubleLinkedList()
+    {
+        START = NULL;
+    }
+
+    void addNode()
+    {
+        int nim;
+        string nm;
+        cout << "\nEnter the roll number of student";
+        cin >> nim;
+    }
+
 }
