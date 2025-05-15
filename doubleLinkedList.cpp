@@ -5,7 +5,7 @@ using namespace std;
 class Node
 {
     public:
-        int nimMhs;
+        int noMhs;
         Node *next;
         Node *prev;
 };
@@ -31,7 +31,10 @@ class DoubleLinkedList
         // Step 1: Alocate memory for new node
         Node *newNode = new Node();
 
-       
+        // Step 2: Assign values to new node
+        newNode->noMhs = nim;
+
+        
     }
 
 }
