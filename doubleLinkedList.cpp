@@ -121,17 +121,4 @@ public:
                 current->next->prev = current->prev;
         }
 
-        // Step 5: Deleted the node
-        delete current;
-        cout << "Record with roll number "  << rollNo << " deleted" << endl;
-    }
-
-    void traverse()
-    {
-        if (START == NULL)
-        {
-            cout << "\nList is empty" << endl;
-        }
-    }
-
 };
