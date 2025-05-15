@@ -4,18 +4,18 @@ using namespace std;
 
 class Node
 {
-    public:
-        int noMhs;
-        Node *next;
-        Node *prev;
+public:
+    int noMhs;
+    Node *next;
+    Node *prev;
 };
 
 class DoubleLinkedList
 {
-    private:
-        Node *START;
+private:
+    Node *START;
 
-    public:
+public:
     DoubleLinkedList()
     {
         START = NULL;
@@ -35,14 +35,18 @@ class DoubleLinkedList
         newNode->noMhs = nim;
 
         // Step 3: Insert new node at the end of the list is empty or nim is smallest
-        if (START == NULL || nim <= START -> noMhs)
+        if (START == NULL || nim <= START->noMhs)
         {
             if (START != NULL && nim == START->noMhs)
             {
                 cout << "\nDuplicate number not allowed" << endl;
                 return;
             }
-            //Step 4: newNode.next = START
+            // Step 4: newNode.next = START
             newNode->next = START;
-            
+
+            // Step 5: START.prev = newNode (if start exists)
+            if (START != NULL)
+                START->prev = newNode;
+
 };
