@@ -180,4 +180,34 @@ public:
         }
     }
 
+    void searchData()
+    {
+        if (START == NULL)
+        {
+            cout << "\nList is empty" << endl;
+            return;
+        }
+
+        int rollNo;
+        cout << "\nEnter roll number to search: ";
+        cin >> rollNo;
+
+        Node *current = START;
+
+        // Step 1: Traverse to find matching roll number
+        while (current != NULL && current->noMhs != rollNo)
+            current = current->next;
+
+        // Step 2: Output result
+        if (current != NULL)
+        {
+            cout << "Record not found\n";
+        }
+        else
+        {
+            cout << "Record found\n";
+            cout << "Roll Number:  " << Current->noMhs << endl;
+        }
+    }
+
 };
